@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 5: Brasa Nobre</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      background-color: #121214;
+      color: #ffffff;
+    }
+
+    .navbar {
+      background-color: #1a1a1e;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      items-center: center;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .btn-delivery {
+      background-color: #ea580c;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .btn-delivery:hover {
+      background-color: #f59e0b;
+    }
+
+    .header {
+      text-align: center;
+      padding: 64px 16px;
+      background-color: #09090b;
+    }
+
+    .subtitle {
+      color: #f59e0b;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: 900;
+      margin: 16px 0;
+    }
+
+    .title-highlight {
+      color: #ea580c;
+    }
+
+    .description {
+      color: #a1a1aa;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 16px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .grid-produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+
+    .card-produto {
+      background-color: #1a1a1e;
+      padding: 16px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .img-produto {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+
+    .nome-produto {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .desc-produto {
+      color: #a1a1aa;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    .preco-produto {
+      font-size: 20px;
+      font-weight: bold;
+      color: #f59e0b;
+      margin-top: 16px;
+      display: block;
+    }
+
+    .grid-galeria {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 64px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-galeria {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .img-galeria {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .card-info {
+      background-color: #1a1a1e;
+      padding: 24px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .card-info h2 {
+      margin-bottom: 16px;
+    }
+
+    .card-info p {
+      color: #d4d4d8;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .closed-day {
+      color: #f59e0b;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .footer {
+      background-color: #09090b;
+      padding: 24px;
+      text-align: center;
+      font-size: 12px;
+      color: #71717a;
+    }
+
+    .footer p {
+      margin-bottom: 8px;
+    }
+
+    .footer a {
+      color: #a1a1aa;
+      margin: 0 8px;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <span style="color: #ea580c;">🔥</span> BRASA NOBRE
+    </div>
+    <a href="https://wa.me" target="_blank" class="btn-delivery">
+      Pedir pelo Delivery
+    </a>
+  </nav>
+
+  <header class="header">
+    <span class="subtitle">Hamburgueria Artesanal & Smokehouse</span>
+    <h1 class="title">
+      O sabor perfeito direto da <span class="title-highlight">brasa para a sua mesa</span>.
+    </h1>
+    <p class="description">
+      Sinta a suculência e o aroma inconfundível do verdadeiro hambúrguer defumado.
+    </p>
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h2 class="section-title">Cardápio</h2>
+      <div class="grid-produtos">
+        
+        <div class="card-produto">
+          <div>
+            <img src="https://unsplash.com" alt="Smash Bacon" class="img-produto">
+            <h3 class="nome-produto">Smash Bacon</h3>
+            <p class="desc-produto">Blend prensado com crostinha, muito bacon crocante e queijo derretido.</p>
+          </div>
+          <span class="preco-produto">R$ 38,00</span>
+        </div>
+
+        <div class="card-produto">
+          <div>
+            <img src="https://unsplash.com" alt="Truffle Gorgon" class="img-produto">
+            <h3 class="nome-produto">Truffle Gorgon</h3>
+            <p class="desc-produto">Hambúrguer de 180g defumado, creme de gorgonzola e azeite trufado.</p>
+          </div>
+          <span class="preco-produto">R$ 44,00</span>
+        </div>
+
+        <div class="card-produto">
+          <div>
+            <img src="https://unsplash.com" alt="Smokehouse" class="img-produto">
+            <h3 class="nome-produto">Smokehouse</h3>
+            <p class="desc-produto">Blend defumado, queijo cheddar, cebola caramelizada e barbecue.</p>
+          </div>
+          <span class="preco-produto">R$ 42,00</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2 class="subtitle" style="text-align: center; margin-bottom: 16px;">Galeria</h2>
+      <div class="grid-galeria">
+        <img src="bacon.jpg" class="img-galeria">
+        <img src="truffle.jpg" class="img-galeria">
+        <img src="smokehouse.jpg" class="img-galeria">
+        <img src="galeria.jpg" class="img-galeria">
+      </div>
+    </section>
+
+    <section class="card-info">
+      <h2>Localização e Horários</h2>
+      <p><strong>Endereço:</strong> Rua dos Defumados, 750 — Bairro Brasa Alta</p>
+      <p><strong>Funcionamento:</strong> Quarta a Segunda — Das 18h às 23h</p>
+      <p class="closed-day">(Fechado às Terças)</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p style="font-weight: bold; color: #a1a1aa;">🔥 BRASA NOBRE</p>
+    <div>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+    </div>
+  </footer>
+
+</body>
+</html>
